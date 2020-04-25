@@ -1,1 +1,24 @@
-<p>angular-prime-form-control works!</p>
+<div>
+  <div *ngIf="label">{{label}}</div>
+  <ng-container [ngSwitch]="type">
+    <div *ngSwitchCase="'text' || 'number'">
+      <input [type]="type">
+    </div>
+    <div *ngSwitchCase="'textarea'">
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div *ngSwitchCase="'select'">
+      <p-dropdown>
+
+      </p-dropdown>
+    </div>
+    <div *ngSwitchCase="'password'">
+      <input [type]="type">
+    </div>
+    <div *ngSwitchCase="'checkbox'">
+      <p-checkbox>
+
+      </p-checkbox>
+    </div>
+  </ng-container>
+</div>

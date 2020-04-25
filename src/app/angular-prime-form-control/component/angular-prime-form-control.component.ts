@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-angular-prime-form-control',
@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./angular-prime-form-control.component.scss']
 })
 export class AngularPrimeFormControlComponent implements OnInit {
-
+  @Input() type: string;
+  @Input() key: string;
+  @Input() label: string;
+  @Input() placeholder: string;
+  @Input() required: string;
   constructor() { }
 
   ngOnInit(): void {
