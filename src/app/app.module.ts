@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import {InputTextModule} from 'primeng';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {AngularPrimeFormControlModule} from './angular-prime-form-control/module/angular-prime-form-control.module';
+import {AngularPrimeFormControlModule} from './angular-prime-form-control/angular-prime-form-control.module';
 
 @NgModule({
   declarations: [

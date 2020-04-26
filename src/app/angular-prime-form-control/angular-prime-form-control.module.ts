@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {AngularPrimeFormControlComponent} from '../component/angular-prime-form-control.component';
+import {AngularPrimeFormControlComponent} from './angular-prime-form-control.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {AngularPrimeFormControlService} from '../service/angular-prime-form-control.service';
+import {AngularPrimeFormControlService} from './angular-prime-form-control.service';
 import {CheckboxModule, DropdownModule} from 'primeng';
 
 

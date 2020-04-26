@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {
   AngularPrimeFormControlService,
-} from './angular-prime-form-control/service/angular-prime-form-control.service';
+} from './angular-prime-form-control/angular-prime-form-control.service';
 import {FormGroup} from '@angular/forms';
 import {description} from './app-init';
 
