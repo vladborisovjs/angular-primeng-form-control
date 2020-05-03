@@ -1,133 +1,68 @@
 export const description = {
   general: [
     {
-      key: 'captain',
+      key: 'cars',
       type: 'select',
       label: {
-        ru: 'Капитан',
-        en: 'Captain'
+        ru: 'Тачки',
+        en: 'Cars'
       },
-      options: [],
-      placeholder: {
-        ru: 'Выберите капитана',
-        en: 'Select captain'
-      }
-    },
-    {
-      key: 'ship',
-      type: 'select',
-      label: {
-        ru: 'Судно',
-        en: 'Ship\'s'
-      },
-      options: [],
-      placeholder: {
-        ru: ' Выбор из списка',
-        en: 'Select from list'
-      }
-    },
-    {
-      key: 'date',
-      type: 'datetime',
-      label: {
-        ru: 'Дата',
-        en: 'Date'
-      },
+      options: [
+        {name: 'Audi', value: 'Audi'},
+        {name: 'BMW', value: 'BMW'},
+        {name: 'Fiat', value: 'Fiat'},
+        {name: 'Ford', value: 'Ford'},
+        {name: 'Honda', value: 'Honda'},
+        {name: 'Jaguar', value: 'Jaguar'},
+        {name: 'Mercedes', value: 'Mercedes'},
+        {name: 'Renault', value: 'Renault'},
+        {name: 'VW', value: 'VW'},
+        {name: 'Volvo', value: 'Volvo'}
+      ],
       params: {
-        from: 'дд.мм.гг',
-        to: 'дд.мм.гг',
-        defaultRange: 'дд.мм.гг',
-        isMoscow: true
+        filter: true,
+        showClear: true
       },
-      isDisabled: true
+      placeholder: {
+        ru: 'Выберите бургер',
+        en: 'Select burger'
+      }
     },
     {
-      key: 'voyage_number',
+      key: 'sause',
       type: 'text',
       label: {
-        ru: 'Номер рейса',
-        en: 'Voyage number'
+        ru: 'Соус',
+        en: 'Sause'
       },
       placeholder: {
-        ru: 'XXXXXXXXX',
-        en: 'XXXXXXXXX'
+        ru: 'Введите соус',
+        en: 'Fill in sause'
       }
     },
     {
-      key: 'process',
-      type: 'select',
-      label: {
-        ru: 'Процесс',
-        en: 'Process'
-      },
-      options: [],
-      placeholder: {
-        ru: ' Выбор из списка',
-        en: 'Select from list'
-      }
-    },
-    {
-      key: 'charterer',
-      type: 'select',
-      label: {
-        ru: 'Фрахтователь',
-        en: 'Charterer'
-      },
-      placeholder: {
-        ru: ' Выбор из списка',
-        en: 'Select from list'
-      },
-      options: [],
-    },
-    {
-      key: 'port',
-      type: 'select',
-      label: {
-        ru: 'Порт',
-        en: 'Port'
-      },
-      placeholder: {
-        ru: ' Выбор из списка',
-        en: 'Select from list'
-      },
-      options: [],
-    },
-    {
-      key: 'terminal',
-      type: 'select',
-      label: {
-        ru: 'Терминал',
-        en: 'Terminal'
-      },
-      placeholder: {
-        ru: ' Выбор из списка',
-        en: 'Select from list'
-      },
-      options: [],
-    },
-    {
-      key: 'cargo',
-      type: 'select',
-      label: {
-        ru: 'Груз',
-        en: 'Cargo'
-      },
-      placeholder: {
-        ru: ' Выбор из списка',
-        en: 'Select from list'
-      },
-      options: [],
-    },
-    {
-      key: 'quantity_SWB',
+      key: 'sause_amount',
       type: 'number',
       label: {
-        ru: 'Коносам. количество',
-        en: 'Quantity SWB'
+        ru: 'Количество соусов',
+        en: 'Sauses amount'
       },
-      metric: {
-        ru: '(тн VAC)',
-        en: '(mt VAC)'
+      placeholder: {
+        ru: 'Введите количество соусов',
+        en: 'Fill in sause amount'
+      },
+      params: {
+        minVal: 0,
+        maxVal: 100
+      },
+
+    },
+    {
+      key: 'password',
+      type: 'password',
+      label: {
+        ru: 'Пароль',
+        en: 'Password'
       },
       placeholder: {
         ru: 'XXXXX,XXX',
@@ -135,364 +70,19 @@ export const description = {
       }
     },
     {
-      key: 'average_rate',
-      type: 'number',
+      key: 'comment',
+      type: 'textarea',
       label: {
-        ru: 'Средняя произв. грузов. операции',
-        en: 'Average rate'
-      },
-      metric: {
-        ru: `(м³/ч)`,
-        en: `(m³/h)`
+        ru: 'Комменарии',
+        en: 'Comments'
       },
       placeholder: {
-        ru: 'XXXX',
-        en: 'XXXX'
-      }
-    }
-  ],
-  manifolds: [
-    {
-      key: 'manifold_type',
-      type: 'select',
-      label: {
-        ru: 'Тип',
-        en: 'Type'
+        ru: 'Введите комментарии',
+        en: 'Fill in comment'
       },
-      options: [],
-      placeholder: {
-        ru: ' Выбор из списка',
-        en: 'Select from list'
-      },
-    },
-    {
-      key: 'manifold_amount',
-      type: 'number',
-      label: {
-        ru: 'Кол-во',
-        en: 'Nr'
-      },
-      placeholder: {
-        ru: 'Введите количество манифольд',
-        en: 'Fill in manifold amount'
-      }
-    },
-    {
-      key: 'manifold_diameter',
-      type: 'number',
-      label: {
-        ru: 'Диаметр',
-        en: 'Diameter'
-      },
-      placeholder: {
-        ru: 'Введите диаметр',
-        en: 'Fill in diameter'
-      },
-      metric: {
-        ru: 'см',
-        en: 'sm'
-      }
-    }
-  ],
-  bunkering: [
-    {
-      key: 'bunkering_masut',
-      type: 'number',
-      label: {
-        ru: 'Мазут',
-        en: 'VLSFO'
-      },
-      placeholder: {
-        ru: 'XXX,X',
-        en: 'XXX,X'
-      },
-      metric: {
-        ru: 'т',
-        en: 't'
-      }
-    },
-    {
-      key: 'bunkering_diesel',
-      type: 'number',
-      label: {
-        ru: 'Дизель',
-        en: 'MGO'
-      },
-      placeholder: {
-        ru: 'XXX,X',
-        en: 'XXX,X'
-      },
-      metric: {
-        ru: 'т',
-        en: 't'
-      }
-    },
-    {
-      key: 'bunkering_water',
-      type: 'number',
-      label: {
-        ru: 'Вода',
-        en: 'FW'
-      },
-      placeholder: {
-        ru: 'XXX,X',
-        en: 'XXX,X'
-      },
-      metric: {
-        ru: 'т',
-        en: 't'
-      }
-    }
-  ],
-  ship_representative: [
-    {
-      key: 'representative_ship_position',
-      type: 'text',
-      label: {
-        ru: 'Должность',
-        en: 'Position'
-      },
-      placeholder: {
-        ru: 'Введите должность',
-        en: 'Fill in position'
-      }
-    },
-    {
-      key: 'representative_ship_full_name',
-      type: 'text',
-      label: {
-        ru: 'Ф.И.О',
-        en: 'Full name'
-      },
-      placeholder: {
-        ru: 'Введите Ф.И.О',
-        en: 'Fill in full name'
-      }
-    }
-  ],
-  terminal_representative: [
-    {
-      key: 'representative_terminal_position',
-      type: 'text',
-      label: {
-        ru: 'Должность',
-        en: 'Position'
-      },
-      placeholder: {
-        ru: 'Введите должность',
-        en: 'Fill in position'
-      }
-    },
-    {
-      key: 'representative_terminal_full_name',
-      type: 'text',
-      label: {
-        ru: 'Ф.И.О',
-        en: 'Full name'
-      },
-      placeholder: {
-        ru: 'Введите Ф.И.О',
-        en: 'Fill in full name'
-      }
-    }
-  ],
-  arrival_fuel: [
-    {
-      key: 'arrival_fuel_masut',
-      type: 'number',
-      label: {
-        ru: 'Мазут',
-        en: 'IFO'
-      },
-      placeholder: {
-        ru: 'XXX,X',
-        en: 'XXX,X'
-      },
-      metric: {
-        ru: 'т',
-        en: 't'
-      }
-    },
-    {
-      key: 'arrival_fuel_masut',
-      type: 'number',
-      label: {
-        ru: 'Мазут',
-        en: 'IFO'
-      },
-      placeholder: {
-        ru: 'XXX,X',
-        en: 'XXX,X'
-      },
-      metric: {
-        ru: 'т',
-        en: 't'
-      }
-    },
-    {
-      key: 'arrival_fuel_diesel',
-      type: 'number',
-      label: {
-        ru: 'Дизель',
-        en: 'MGO'
-      },
-      placeholder: {
-        ru: 'XXX,X',
-        en: 'XXX,X'
-      },
-      metric: {
-        ru: 'т',
-        en: 't'
-      }
-    },
-    {
-      key: 'arrival_fuel_water',
-      type: 'number',
-      label: {
-        ru: 'Вода',
-        en: 'FW'
-      },
-      placeholder: {
-        ru: 'XXX,X',
-        en: 'XXX,X'
-      },
-      metric: {
-        ru: 'т',
-        en: 't'
-      }
-    }
-  ],
-  arrival_drafts: [
-    {
-      key: 'arrival_drafts_tn',
-      type: 'number',
-      label: {
-        ru: 'Тн',
-        en: 'Tf'
-      },
-      placeholder: {
-        ru: 'X,XX',
-        en: 'X,XX'
-      },
-      metric: {
-        ru: 'м',
-        en: 'm'
-      }
-    },
-    {
-      key: 'arrival_drafts_tk',
-      type: 'number',
-      label: {
-        ru: 'Тк',
-        en: 'Ta'
-      },
-      placeholder: {
-        ru: 'X,XX',
-        en: 'X,XX'
-      },
-      metric: {
-        ru: 'м',
-        en: 'm'
-      }
-    }
-  ],
-  departure_fuel: [
-    {
-      key: 'departure_fuel_masut',
-      type: 'number',
-      label: {
-        ru: 'Мазут',
-        en: 'IFO'
-      },
-      placeholder: {
-        ru: 'XXX,X',
-        en: 'XXX,X'
-      },
-      metric: {
-        ru: 'т',
-        en: 't'
-      }
-    },
-    {
-      key: 'departure_fuel_masut',
-      type: 'number',
-      label: {
-        ru: 'Мазут',
-        en: 'IFO'
-      },
-      placeholder: {
-        ru: 'XXX,X',
-        en: 'XXX,X'
-      },
-      metric: {
-        ru: 'т',
-        en: 't'
-      }
-    },
-    {
-      key: 'departure_fuel_diesel',
-      type: 'number',
-      label: {
-        ru: 'Дизель',
-        en: 'MGO'
-      },
-      placeholder: {
-        ru: 'XXX,X',
-        en: 'XXX,X'
-      },
-      metric: {
-        ru: 'т',
-        en: 't'
-      }
-    },
-    {
-      key: 'departure_fuel_water',
-      type: 'number',
-      label: {
-        ru: 'Вода',
-        en: 'FW'
-      },
-      placeholder: {
-        ru: 'XXX,X',
-        en: 'XXX,X'
-      },
-      metric: {
-        ru: 'т',
-        en: 't'
-      }
-    }
-  ],
-  departure_drafts: [
-    {
-      key: 'departure_drafts_tn',
-      type: 'number',
-      label: {
-        ru: 'Тн',
-        en: 'Tf'
-      },
-      placeholder: {
-        ru: 'X,XX',
-        en: 'X,XX'
-      },
-      metric: {
-        ru: 'м',
-        en: 'm'
-      }
-    },
-    {
-      key: 'departure_drafts_tk',
-      type: 'number',
-      label: {
-        ru: 'Тк',
-        en: 'Ta'
-      },
-      placeholder: {
-        ru: 'X,XX',
-        en: 'X,XX'
-      },
-      metric: {
-        ru: 'м',
-        en: 'm'
+      params: {
+        rows: 10,
+        cols: 40
       }
     }
   ],

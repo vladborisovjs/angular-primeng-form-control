@@ -1,19 +1,23 @@
 <div>
   <div *ngIf="label">{{label}}</div>
   <ng-container [ngSwitch]="type">
-    <div *ngSwitchCase="'text' || 'number'">
-      <input [type]="type">
+    <div *ngSwitchCase="'text'">
+      <input [type]="type" [placeholder]="placeholder">
+    </div>
+    <div *ngSwitchCase="'number'">
+      <p-spinner size="40" [(ngModel)]="val" [placeholder]="placeholder" [max]="params.maxVal" [min]="params.minVal">
+
+      </p-spinner>
     </div>
     <div *ngSwitchCase="'textarea'">
-      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <textarea name="" id="" [cols]="params.cols" [rows]="params.rows" [placeholder]="placeholder" autoResize="autoResize"></textarea>
     </div>
     <div *ngSwitchCase="'select'">
-      <p-dropdown>
-
+      <p-dropdown [placeholder]="placeholder" optionLabel="name" [options]="options" [(ngModel)]="selectedItem" [filter]="params.filter" [showClear]="params.showClear">
       </p-dropdown>
     </div>
     <div *ngSwitchCase="'password'">
-      <input [type]="type">
+      <input [type]="type" [placeholder]="placeholder">
     </div>
     <div *ngSwitchCase="'checkbox'">
       <p-checkbox>

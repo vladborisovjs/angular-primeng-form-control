@@ -13,11 +13,10 @@ import {description} from './app-init';
 
 export class AppComponent implements OnInit{
   form: FormGroup;
-
+  description = description;
   constructor(private primeForm: AngularPrimeFormControlService) {}
   ngOnInit() {
-    //this.form = this.primeForm.makeForm(description);
-    //console.log(this.form);
-    console.log(this.primeForm.makeForm(description));
+    this.primeForm.makeForm(this.description);
+    console.log(this.description);
   }
 }

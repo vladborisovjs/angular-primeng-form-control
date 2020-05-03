@@ -3,7 +3,9 @@ import { CommonModule } from '@angular/common';
 import {AngularPrimeFormControlComponent} from './angular-prime-form-control.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AngularPrimeFormControlService} from './angular-prime-form-control.service';
-import {CheckboxModule, DropdownModule} from 'primeng';
+import {CheckboxModule, DropdownModule, InputTextModule, SpinnerModule} from 'primeng';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {BrowserModule} from '@angular/platform-browser';
 
 
 
@@ -12,9 +14,13 @@ import {CheckboxModule, DropdownModule} from 'primeng';
   imports: [
     CommonModule,
     FormsModule,
+    BrowserModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    InputTextModule,
     DropdownModule,
-    CheckboxModule
+    CheckboxModule,
+    SpinnerModule
   ],
   exports: [
     AngularPrimeFormControlComponent

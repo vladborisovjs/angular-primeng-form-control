@@ -1,10 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import {InputTextModule} from 'primeng';
+import {AppComponent} from './app.component';
 import {CommonModule} from '@angular/common';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AngularPrimeFormControlModule} from './angular-prime-form-control/angular-prime-form-control.module';
 
 @NgModule({
@@ -12,12 +10,8 @@ import {AngularPrimeFormControlModule} from './angular-prime-form-control/angula
     AppComponent,
   ],
   imports: [
-    BrowserModule,
-    InputTextModule,
     CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    AngularPrimeFormControlModule
+    AngularPrimeFormControlModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

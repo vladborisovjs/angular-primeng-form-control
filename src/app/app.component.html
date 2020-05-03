@@ -1,5 +1,11 @@
-<div>
+<div *ngFor="let group of description['general']">
   <app-angular-prime-form-control
+    [label]="group.label['ru']"
+    [placeholder]="group.placeholder['ru']"
+    [key]="group.key"
+    [type]="group.type"
+    [params]="group.params"
+    [options]="group.options"
   ></app-angular-prime-form-control>
 </div>
 
