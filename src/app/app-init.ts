@@ -53,9 +53,9 @@ export const description = {
       },
       params: {
         minVal: 0,
-        maxVal: 100
+        maxVal: 100,
+        step: 0.25
       },
-
     },
     {
       key: 'password',
