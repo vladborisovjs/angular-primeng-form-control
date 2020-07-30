@@ -3,10 +3,7 @@ export const description = {
     {
       key: 'cars',
       type: 'select',
-      label: {
-        ru: 'Тачки',
-        en: 'Cars'
-      },
+      label: 'Тачки',
       options: [
         {name: 'Audi', value: 'Audi'},
         {name: 'BMW', value: 'BMW'},
@@ -23,34 +20,19 @@ export const description = {
         filter: true,
         showClear: true
       },
-      placeholder: {
-        ru: 'Выберите бургер',
-        en: 'Select burger'
-      }
+      placeholder: 'Выберите бургер',
     },
     {
       key: 'sause',
       type: 'text',
-      label: {
-        ru: 'Соус',
-        en: 'Sause'
-      },
-      placeholder: {
-        ru: 'Введите соус',
-        en: 'Fill in sause'
-      }
+      label: 'Соус',
+      placeholder: 'Введите соус',
     },
     {
       key: 'sause_amount',
       type: 'number',
-      label: {
-        ru: 'Количество соусов',
-        en: 'Sauses amount'
-      },
-      placeholder: {
-        ru: 'Введите количество соусов',
-        en: 'Fill in sause amount'
-      },
+      label: 'Количество соусов',
+      placeholder: 'Введите количество соусов',
       params: {
         minVal: 0,
         maxVal: 100,
@@ -60,87 +42,29 @@ export const description = {
     {
       key: 'password',
       type: 'password',
-      label: {
-        ru: 'Пароль',
-        en: 'Password'
-      },
-      placeholder: {
-        ru: 'XXXXX,XXX',
-        en: 'XXXXX,XXX'
-      }
+      label: 'Пароль',
+      placeholder: 'XXXXX,XXX',
     },
     {
       key: 'comment',
       type: 'textarea',
-      label: {
-        ru: 'Комменарии',
-        en: 'Comments'
-      },
-      placeholder: {
-        ru: 'Введите комментарии',
-        en: 'Fill in comment'
-      },
+      label: 'Комменарии',
+      placeholder: 'Введите комментарии',
       params: {
         rows: 10,
         cols: 40
       }
+    },
+    {
+      key: 'check',
+      type: 'checkbox',
+      label: 'Двойная зп',
+    },
+    {
+      key: 'tricheck',
+      type: 'tricheckbox',
+      label: 'Тройная зп',
     }
-  ],
-  // operations: [
-  //   {
-  //     key: 'types_operation',
-  //     type: 'text',
-  //     label: '',
-  //     isDisabled: false
-  //   },
-  //   {
-  //     key: 'operation_date',
-  //     type: 'datetime',
-  //     label: '',
-  //     params: {
-  //       from: 'дд.мм.гг',
-  //       to: 'дд.мм.гг',
-  //       defaultRange: 'дд.мм.гг',
-  //       isMoscow: true
-  //     },
-  //     isDisabled: false
-  //   }
-  // ],
-  // delay: [
-  //   {
-  //     key: 'reasons_delay',
-  //     type: 'text',
-  //     label: '',
-  //     placeholder: {
-  //       ru: 'Заполните поле',
-  //       en: 'Fill in field'
-  //     },
-  //     isDisabled: false
-  //   },
-  //   {
-  //     key: 'delay_date_start',
-  //     type: 'datetime',
-  //     label: '',
-  //     params: {
-  //       from: 'дд.мм.гг',
-  //       to: 'дд.мм.гг',
-  //       defaultRange: 'дд.мм.гг',
-  //       isMoscow: true
-  //     },
-  //     isDisabled: false
-  //   },
-  //   {
-  //     key: 'delay_date_end',
-  //     type: 'datetime',
-  //     label: '',
-  //     params: {
-  //       from: 'дд.мм.гг',
-  //       to: 'дд.мм.гг',
-  //       defaultRange: 'дд.мм.гг',
-  //       isMoscow: true
-  //     },
-  //     isDisabled: false
-  //   },
-  // ]
+  ]
 };
 

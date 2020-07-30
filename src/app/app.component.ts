@@ -16,7 +16,9 @@ export class AppComponent implements OnInit{
   description = description;
   constructor(private primeForm: VbPrimeFormService) {}
   ngOnInit() {
-    this.primeForm.makeForm(this.description);
-    console.log(this.description);
+    this.form = this.primeForm.makeForm(this.description);
+    this.form.valueChanges.subscribe(
+        el => { console.log(el); }
+    );
   }
 }

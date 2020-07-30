@@ -11,7 +11,7 @@ export class VbPrimeFormService {
     for (const group in description) {
       nestedFg.push(new FormGroup({}));
       for (let i = 0; i < description[`${group}`].length; i++) {
-        const fc = new FormControl(description[`${group}`][i].key);
+        const fc = new FormControl();
         nestedFg[nestedFg.length - 1].addControl(description[`${group}`][i].key, fc);
       }
       fg.addControl(group, nestedFg[nestedFg.length - 1]);

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import {VbPrimeFormComponent} from './components/vb-prime-form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {VbPrimeFormService} from './vb-prime-form.service';
-import {CheckboxModule, DropdownModule, InputTextModule, SpinnerModule} from 'primeng';
+import {CheckboxModule, DropdownModule, InputTextModule, SpinnerModule, TriStateCheckboxModule} from 'primeng';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {BrowserModule} from '@angular/platform-browser';
 
@@ -20,6 +20,7 @@ import {BrowserModule} from '@angular/platform-browser';
     InputTextModule,
     DropdownModule,
     CheckboxModule,
+    TriStateCheckboxModule,
     SpinnerModule
   ],
   exports: [

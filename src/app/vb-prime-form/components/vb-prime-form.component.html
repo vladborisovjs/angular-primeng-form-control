@@ -5,12 +5,14 @@
       <input
         [type]="type"
         [placeholder]="placeholder"
+        [(ngModel)]="value"
+        [value]="value"
       >
     </div>
     <div *ngSwitchCase="'number'">
       <p-spinner
         size="40"
-        [(ngModel)]="val"
+        [(ngModel)]="value"
         [placeholder]="placeholder"
         [max]="(params && params.maxVal) ? params.maxVal : undefined"
         [min]="(params && params.minVal) ? params.minVal : 0"
@@ -22,11 +24,13 @@
         [cols]="params.cols"
         [rows]="params.rows"
         [placeholder]="placeholder"
-        autoResize="autoResize">
-      </textarea>
+        [(ngModel)]="value"
+        [value]="value"
+        autoResize="autoResize"></textarea>
     </div>
     <div *ngSwitchCase="'select'">
       <p-dropdown
+        (onChange)="writeValue($event.value.value)"
         [placeholder]="placeholder"
         optionLabel="name"
         [options]="options"
@@ -40,12 +44,22 @@
       <input
         [type]="type"
         [placeholder]="placeholder"
+        [(ngModel)]="value"
+        [value]="value"
       >
     </div>
     <div *ngSwitchCase="'checkbox'">
-      <p-checkbox>
-
+      <p-checkbox
+        binary="true"
+      [(ngModel)]="value"
+      >
       </p-checkbox>
+    </div>
+    <div *ngSwitchCase="'tricheckbox'">
+      <p-triStateCheckbox
+        [(ngModel)]="value"
+      >
+      </p-triStateCheckbox>
     </div>
   </ng-container>
 </div>
