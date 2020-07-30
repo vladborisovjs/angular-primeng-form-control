@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, forwardRef, Input, OnInit, ViewEncapsulation} from '@angular/core';
-import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
+import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 
 @Component({
   selector: 'vb-prime-form',
@@ -16,7 +16,7 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class VbPrimeFormComponent implements OnInit, ControlValueAccessor {
-  // todo calendar, radio, keyfilter, mask
+  // todo calendar, autocomple, inputSwitch, multiselect, radio, keyfilter, mask
   @Input() type:
     'text' |
     'password' |
@@ -67,8 +67,10 @@ export class VbPrimeFormComponent implements OnInit, ControlValueAccessor {
   }
 
   writeValue(obj: any): void {
-    if (obj !== undefined) {
+    if (obj !== undefined && obj !== null) {
       this.value = obj;
+    } else {
+      this.value = '';
     }
   }
 
@@ -77,6 +79,10 @@ export class VbPrimeFormComponent implements OnInit, ControlValueAccessor {
   }
 
   ngOnInit(): void {
+    if (!this.placeholder) {
+      const verb = this.type === 'select' ? 'Выберите' : 'Введите';
+      this.placeholder = `${verb} ${this.label.toLowerCase()}`;
+    }
   }
 
 }

@@ -30,7 +30,7 @@
     </div>
     <div *ngSwitchCase="'select'">
       <p-dropdown
-        (onChange)="writeValue($event.value.value)"
+        (onChange)="writeValue($event.value?.value)"
         [placeholder]="placeholder"
         optionLabel="name"
         [options]="options"

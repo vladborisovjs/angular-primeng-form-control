@@ -3,7 +3,7 @@ export const description = {
     {
       key: 'cars',
       type: 'select',
-      label: 'Тачки',
+      label: 'Select',
       options: [
         {name: 'Audi', value: 'Audi'},
         {name: 'BMW', value: 'BMW'},
@@ -20,18 +20,18 @@ export const description = {
         filter: true,
         showClear: true
       },
-      placeholder: 'Выберите бургер',
+      placeholder: 'Выберите',
     },
     {
       key: 'sause',
       type: 'text',
-      label: 'Соус',
+      label: 'InputText',
       placeholder: 'Введите соус',
     },
     {
       key: 'sause_amount',
       type: 'number',
-      label: 'Количество соусов',
+      label: 'Spinner',
       placeholder: 'Введите количество соусов',
       params: {
         minVal: 0,
@@ -42,13 +42,12 @@ export const description = {
     {
       key: 'password',
       type: 'password',
-      label: 'Пароль',
-      placeholder: 'XXXXX,XXX',
+      label: 'Password',
     },
     {
       key: 'comment',
       type: 'textarea',
-      label: 'Комменарии',
+      label: 'Textarea',
       placeholder: 'Введите комментарии',
       params: {
         rows: 10,
@@ -58,12 +57,12 @@ export const description = {
     {
       key: 'check',
       type: 'checkbox',
-      label: 'Двойная зп',
+      label: 'Checkbox',
     },
     {
       key: 'tricheck',
       type: 'tricheckbox',
-      label: 'Тройная зп',
+      label: 'Tricheckbox',
     }
   ]
 };
