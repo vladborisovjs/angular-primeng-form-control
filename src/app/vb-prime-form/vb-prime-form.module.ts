@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {AngularPrimeFormControlComponent} from './angular-prime-form-control.component';
+import {VbPrimeFormComponent} from './components/vb-prime-form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {AngularPrimeFormControlService} from './angular-prime-form-control.service';
+import {VbPrimeFormService} from './vb-prime-form.service';
 import {CheckboxModule, DropdownModule, InputTextModule, SpinnerModule} from 'primeng';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {BrowserModule} from '@angular/platform-browser';
@@ -10,7 +10,7 @@ import {BrowserModule} from '@angular/platform-browser';
 
 
 @NgModule({
-  declarations: [AngularPrimeFormControlComponent],
+  declarations: [VbPrimeFormComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -23,8 +23,8 @@ import {BrowserModule} from '@angular/platform-browser';
     SpinnerModule
   ],
   exports: [
-    AngularPrimeFormControlComponent
+    VbPrimeFormComponent
   ],
-  providers: [AngularPrimeFormControlService]
+  providers: [VbPrimeFormService]
 })
-export class AngularPrimeFormControlModule { }
+export class VbPrimeFormModule { }

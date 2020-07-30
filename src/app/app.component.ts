@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {
-  AngularPrimeFormControlService,
-} from './angular-prime-form-control/angular-prime-form-control.service';
+  VbPrimeFormService,
+} from './vb-prime-form/vb-prime-form.service';
 import {FormGroup} from '@angular/forms';
 import {description} from './app-init';
 
@@ -14,7 +14,7 @@ import {description} from './app-init';
 export class AppComponent implements OnInit{
   form: FormGroup;
   description = description;
-  constructor(private primeForm: AngularPrimeFormControlService) {}
+  constructor(private primeForm: VbPrimeFormService) {}
   ngOnInit() {
     this.primeForm.makeForm(this.description);
     console.log(this.description);

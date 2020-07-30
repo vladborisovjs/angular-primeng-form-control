@@ -2,10 +2,10 @@ import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-angular-prime-form-control',
-  templateUrl: './angular-prime-form-control.component.html',
-  styleUrls: ['./angular-prime-form-control.component.scss']
+  templateUrl: './vb-prime-form.component.html',
+  styleUrls: ['./vb-prime-form.component.scss']
 })
-export class AngularPrimeFormControlComponent implements OnInit {
+export class VbPrimeFormComponent implements OnInit {
   // todo calendar, checkbox, tricheckbox, radio, keyfilter, mask
   @Input() type:
     'text' |

@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {Injectable} from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms';
 
 @Injectable()
-export class AngularPrimeFormControlService {
+export class VbPrimeFormService {
 
   constructor() { }
   makeForm(description): FormGroup {

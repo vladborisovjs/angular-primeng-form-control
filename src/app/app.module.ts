@@ -1,9 +1,8 @@
-import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {CommonModule} from '@angular/common';
-import {AngularPrimeFormControlModule} from './angular-prime-form-control/angular-prime-form-control.module';
+import {VbPrimeFormModule} from './vb-prime-form/vb-prime-form.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +10,7 @@ import {AngularPrimeFormControlModule} from './angular-prime-form-control/angula
   ],
   imports: [
     CommonModule,
-    AngularPrimeFormControlModule,
+    VbPrimeFormModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
