@@ -102,6 +102,11 @@ export const description = {
       key: 'tricheck',
       type: 'triCheckbox',
       label: 'Tricheckbox',
+    },
+    {
+      key: 'switch',
+      type: 'inputSwitch',
+      label: 'Переключалочка'
     }
   ]
 };

@@ -48,7 +48,6 @@
         [filterPlaceHolder]="placeholder"
         (onChange)="writeValue($event.value)"
       >
-
       </p-multiSelect>
     </div>
     <div *ngSwitchCase="'password'">
@@ -71,6 +70,13 @@
         [(ngModel)]="value"
       >
       </p-triStateCheckbox>
+    </div>
+    <div *ngSwitchCase="'inputSwitch'">
+      <p-inputSwitch
+        [(ngModel)]="value"
+
+      >
+      </p-inputSwitch>
     </div>
   </ng-container>
 </div>

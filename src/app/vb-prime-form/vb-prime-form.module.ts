@@ -5,7 +5,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {VbPrimeFormService} from './vb-prime-form.service';
 import {
   CheckboxModule,
-  DropdownModule,
+  DropdownModule, InputSwitchModule,
   InputTextModule,
   MultiSelectModule,
   SpinnerModule,
@@ -29,7 +29,8 @@ import {BrowserModule} from '@angular/platform-browser';
     MultiSelectModule,
     CheckboxModule,
     TriStateCheckboxModule,
-    SpinnerModule
+    SpinnerModule,
+    InputSwitchModule
   ],
   exports: [
     VbPrimeFormComponent

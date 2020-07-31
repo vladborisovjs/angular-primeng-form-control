@@ -16,7 +16,7 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class VbPrimeFormComponent implements OnInit, ControlValueAccessor {
-  // todo calendar, autocomple, inputSwitch, radio, keyfilter, mask
+  // todo calendar, inputSwitch, radio, keyfilter, mask
   @Input() type:
     'text' |
     'password' |
@@ -25,6 +25,7 @@ export class VbPrimeFormComponent implements OnInit, ControlValueAccessor {
     'checkbox' |
     'triCheckbox' |
     'multiSelect' |
+    'inputSwitch' |
     'select'  = 'text';
   @Input() key: string;
   @Input() label: string;
