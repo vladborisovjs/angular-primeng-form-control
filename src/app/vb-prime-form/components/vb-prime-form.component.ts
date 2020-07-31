@@ -16,7 +16,7 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class VbPrimeFormComponent implements OnInit, ControlValueAccessor {
-  // todo calendar, radio, keyfilter, mask
+  // todo calendar, radio
   @Input() type:
     'text' |
     'password' |
@@ -40,7 +40,8 @@ export class VbPrimeFormComponent implements OnInit, ControlValueAccessor {
     cols?: number; // columns for type textarea
     filter?: boolean; // filter for type select
     showClear?: boolean; // clear for type select
-    defaultLabel?: string // label (no selected) for type multiSelect
+    defaultLabel?: string; // label (no selected) for type multiSelect
+    mask?: string; // mask for input field
     pKeyFilter?:
       'pint' | // Positive integers
       'int' | // Integers
@@ -49,7 +50,7 @@ export class VbPrimeFormComponent implements OnInit, ControlValueAccessor {
       'hex' | // Hexadecimal
       'email' | // Email
       'alpha' | // Alphabetic
-      'alphanum' // Alphanumeric
+      'alphanum'; // Alphanumeric
   };
   val: any;
   regExpMatchAll: RegExp = /.*/;

@@ -20,6 +20,14 @@
         [step]="(params && params.step) ? params.step : 1">
       </p-spinner>
     </div>
+    <div *ngSwitchCase="'mask'">
+      <p-inputMask
+        [(ngModel)]="value"
+        [mask]="params.mask"
+        [placeholder]="placeholder"
+      >
+      </p-inputMask>
+    </div>
     <div *ngSwitchCase="'textarea'">
       <textarea
         [cols]="params.cols"

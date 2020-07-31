@@ -110,6 +110,15 @@ export const description = {
       key: 'switch',
       type: 'inputSwitch',
       label: 'Переключалочка'
+    },
+    {
+      key: 'mask',
+      type: 'mask',
+      label: 'Маска',
+      placeholder: '8(800)___-__-__',
+      params: {
+        mask: '8(800)999-99-99'
+      }
     }
   ]
 };
