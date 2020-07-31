@@ -74,7 +74,7 @@ export const description = {
       key: 'sause_amount',
       type: 'number',
       label: 'Spinner',
-      placeholder: 'Введите количество соусов',
+      placeholder: 'Введите',
       params: {
         minVal: 0,
         maxVal: 100,
