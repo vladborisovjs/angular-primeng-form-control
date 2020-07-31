@@ -35,10 +35,21 @@
         optionLabel="name"
         [options]="options"
         [(ngModel)]="selectedItem"
-        [filter]="params.filter"
-        [showClear]="params.showClear"
+        [filter]="params?.filter"
+        [showClear]="params?.showClear"
       >
       </p-dropdown>
+    </div>
+    <div *ngSwitchCase="'multiSelect'">
+      <p-multiSelect
+        [(ngModel)]="selectedItems"
+        [options]="options"
+        [defaultLabel]="params?.defaultLabel"
+        [filterPlaceHolder]="placeholder"
+        (onChange)="writeValue($event.value)"
+      >
+
+      </p-multiSelect>
     </div>
     <div *ngSwitchCase="'password'">
       <input
@@ -55,7 +66,7 @@
       >
       </p-checkbox>
     </div>
-    <div *ngSwitchCase="'tricheckbox'">
+    <div *ngSwitchCase="'triCheckbox'">
       <p-triStateCheckbox
         [(ngModel)]="value"
       >

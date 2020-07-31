@@ -16,11 +16,50 @@ export const description = {
         {name: 'VW', value: 'VW'},
         {name: 'Volvo', value: 'Volvo'}
       ],
+      placeholder: 'Выберите',
+    },
+    {
+      key: 'carsSearch',
+      type: 'select',
+      label: 'Select with search',
+      options: [
+        {name: 'Audi', value: 'Audi'},
+        {name: 'BMW', value: 'BMW'},
+        {name: 'Fiat', value: 'Fiat'},
+        {name: 'Ford', value: 'Ford'},
+        {name: 'Honda', value: 'Honda'},
+        {name: 'Jaguar', value: 'Jaguar'},
+        {name: 'Mercedes', value: 'Mercedes'},
+        {name: 'Renault', value: 'Renault'},
+        {name: 'VW', value: 'VW'},
+        {name: 'Volvo', value: 'Volvo'}
+      ],
       params: {
         filter: true,
         showClear: true
       },
       placeholder: 'Выберите',
+    },
+    {
+      key: 'multiCars',
+      type: 'multiSelect',
+      label: 'multiSelect',
+      options: [
+        {label: 'Audi', value: 'Audi'},
+        {label: 'BMW', value: 'BMW'},
+        {label: 'Fiat', value: 'Fiat'},
+        {label: 'Ford', value: 'Ford'},
+        {label: 'Honda', value: 'Honda'},
+        {label: 'Jaguar', value: 'Jaguar'},
+        {label: 'Mercedes', value: 'Mercedes'},
+        {label: 'Renault', value: 'Renault'},
+        {label: 'VW', value: 'VW'},
+        {label: 'Volvo', value: 'Volvo'}
+      ],
+      params: {
+        defaultLabel: 'Метка по умолчанию',
+      },
+      placeholder: 'Выберите тачку',
     },
     {
       key: 'sause',
@@ -61,7 +100,7 @@ export const description = {
     },
     {
       key: 'tricheck',
-      type: 'tricheckbox',
+      type: 'triCheckbox',
       label: 'Tricheckbox',
     }
   ]

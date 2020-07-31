@@ -16,21 +16,22 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class VbPrimeFormComponent implements OnInit, ControlValueAccessor {
-  // todo calendar, autocomple, inputSwitch, multiselect, radio, keyfilter, mask
+  // todo calendar, autocomple, inputSwitch, radio, keyfilter, mask
   @Input() type:
     'text' |
     'password' |
     'number' |
     'textarea' |
     'checkbox' |
-    'tricheckbox' |
+    'triCheckbox' |
+    'multiSelect' |
     'select'  = 'text';
   @Input() key: string;
   @Input() label: string;
   @Input() placeholder: string;
   @Input() required: string;
   @Input() options: any; // array of object for type select
-  @Input() params: { // additional attributes for fields
+  @Input() params?: { // additional attributes for fields
     maxVal?: number; // max value for type number
     minVal?: number; // min value for type number
     step?: number; // step value for type number
@@ -38,6 +39,7 @@ export class VbPrimeFormComponent implements OnInit, ControlValueAccessor {
     cols?: number; // columns for type textarea
     filter?: boolean; // filter for type select
     showClear?: boolean; // clear for type select
+    defaultLabel?: string // label (no selected) for type multiSelect
   };
   _value: any;
 
@@ -51,12 +53,10 @@ export class VbPrimeFormComponent implements OnInit, ControlValueAccessor {
   }
 
   selectedItem: string;
-
+  selectedItems: any[];
   constructor() { }
-  public onModelChange: any = () => {
-  }
-  public onModelTouched: any = () => {
-  }
+  public onModelChange: any = () => {}
+  public onModelTouched: any = () => {}
 
   registerOnChange(fn: any): void {
     this.onModelChange = fn;
@@ -74,7 +74,7 @@ export class VbPrimeFormComponent implements OnInit, ControlValueAccessor {
     }
   }
 
-  onInputBlur(event) {
+  onInputBlur() {
     this.onModelTouched();
   }
 
