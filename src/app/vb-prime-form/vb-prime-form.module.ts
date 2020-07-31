@@ -4,6 +4,7 @@ import {VbPrimeFormComponent} from './components/vb-prime-form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {VbPrimeFormService} from './vb-prime-form.service';
 import {
+  CalendarModule,
   CheckboxModule,
   DropdownModule, InputMaskModule, InputSwitchModule,
   InputTextModule, KeyFilterModule,
@@ -32,7 +33,8 @@ import {BrowserModule} from '@angular/platform-browser';
     SpinnerModule,
     InputSwitchModule,
     KeyFilterModule,
-    InputMaskModule
+    InputMaskModule,
+    CalendarModule
   ],
   exports: [
     VbPrimeFormComponent

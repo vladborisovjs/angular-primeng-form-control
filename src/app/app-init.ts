@@ -119,6 +119,11 @@ export const description = {
       params: {
         mask: '8(800)999-99-99'
       }
+    },
+    {
+      key: 'startDate',
+      type: 'calendar',
+      label: 'Дата начала'
     }
   ]
 };

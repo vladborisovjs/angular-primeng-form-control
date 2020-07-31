@@ -28,6 +28,22 @@
       >
       </p-inputMask>
     </div>
+    <div *ngSwitchCase="'calendar'">
+      <p-calendar hourFormat="24"
+                  (onSelect)="formateDateToISO($event)"
+                  [placeholder]="placeholder"
+                  [locale]="ru"
+                  [showTime]="true"
+                  [showButtonBar]="true"
+                  [dateFormat]="'dd.mm.yy'"
+                  [yearNavigator]="true"
+                  [monthNavigator]="true"
+                  [yearRange]="rangeYear()"
+                  [timeOnly]="false"
+      >
+
+      </p-calendar>
+    </div>
     <div *ngSwitchCase="'textarea'">
       <textarea
         [cols]="params.cols"
@@ -70,7 +86,7 @@
     <div *ngSwitchCase="'checkbox'">
       <p-checkbox
         binary="true"
-      [(ngModel)]="value"
+        [(ngModel)]="value"
       >
       </p-checkbox>
     </div>

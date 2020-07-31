@@ -16,7 +16,6 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class VbPrimeFormComponent implements OnInit, ControlValueAccessor {
-  // todo calendar, radio
   @Input() type:
     'text' |
     'password' |
@@ -54,6 +53,16 @@ export class VbPrimeFormComponent implements OnInit, ControlValueAccessor {
   };
   val: any;
   regExpMatchAll: RegExp = /.*/;
+  ru = {
+    firstDayOfWeek: 1,
+    dayNames: ['Воскресение', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+    dayNamesShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+    dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+    monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+    monthNamesShort: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+    today: 'Сегодня',
+    clear: 'Очистить'
+  };
   get value(): any {
     return this.val;
   }
@@ -85,7 +94,19 @@ export class VbPrimeFormComponent implements OnInit, ControlValueAccessor {
     }
   }
 
-  onInputBlur() {
+  formateDateToISO(obj) {
+    if (obj) {
+      this.value = obj.toISOString();
+    }
+  }
+
+  rangeYear() {
+    const startYearNav = (new Date().getFullYear() - 100).toString();
+    const endYearNav = new Date().getFullYear().toString();
+    return startYearNav + ':' + endYearNav;
+  }
+
+  onInputBlur(event) {
     this.onModelTouched();
   }
 
