@@ -7,6 +7,7 @@
         [placeholder]="placeholder"
         [(ngModel)]="value"
         [value]="value"
+        [pKeyFilter]="(params && params.pKeyFilter) ? params.pKeyFilter : regExpMatchAll"
       >
     </div>
     <div *ngSwitchCase="'number'">

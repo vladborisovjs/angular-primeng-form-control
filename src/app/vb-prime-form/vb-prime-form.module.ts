@@ -6,7 +6,7 @@ import {VbPrimeFormService} from './vb-prime-form.service';
 import {
   CheckboxModule,
   DropdownModule, InputSwitchModule,
-  InputTextModule,
+  InputTextModule, KeyFilterModule,
   MultiSelectModule,
   SpinnerModule,
   TriStateCheckboxModule
@@ -30,7 +30,8 @@ import {BrowserModule} from '@angular/platform-browser';
     CheckboxModule,
     TriStateCheckboxModule,
     SpinnerModule,
-    InputSwitchModule
+    InputSwitchModule,
+    KeyFilterModule
   ],
   exports: [
     VbPrimeFormComponent

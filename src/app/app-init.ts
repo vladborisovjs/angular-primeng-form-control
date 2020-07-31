@@ -66,6 +66,9 @@ export const description = {
       type: 'text',
       label: 'InputText',
       placeholder: 'Введите соус',
+      params: {
+        pKeyFilter: 'pint'
+      }
     },
     {
       key: 'sause_amount',

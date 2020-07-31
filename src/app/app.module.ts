@@ -6,7 +6,7 @@ import {VbPrimeFormModule} from './vb-prime-form/vb-prime-form.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserModule} from "@angular/platform-browser";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-
+import {TriStateCheckboxModule} from 'primeng/tristatecheckbox';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +19,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     BrowserModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    TriStateCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
