@@ -17,6 +17,7 @@ export class AppComponent implements OnInit{
   constructor(private primeForm: VbPrimeFormService) {}
   ngOnInit() {
     this.form = this.primeForm.makeForm(this.description);
+    console.log(this.form);
     this.form.valueChanges.subscribe(
         el => { console.log(el); }
     );

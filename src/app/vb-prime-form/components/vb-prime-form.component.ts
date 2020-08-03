@@ -30,7 +30,6 @@ export class VbPrimeFormComponent implements OnInit, ControlValueAccessor {
   @Input() label: string;
   @Input() placeholder: string;
   @Input() disabled: boolean;
-  @Input() required: string;
   @Input() options: any; // array of object for type select
   @Input() params?: { // additional attributes for fields
     maxVal?: number; // max value for type number
@@ -56,6 +55,7 @@ export class VbPrimeFormComponent implements OnInit, ControlValueAccessor {
   };
   val: any;
   regExpMatchAll: RegExp = /.*/;
+  required = false;
   ru = {
     firstDayOfWeek: 1,
     dayNames: ['Воскресение', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],

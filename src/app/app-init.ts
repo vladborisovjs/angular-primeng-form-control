@@ -17,7 +17,7 @@ export const description = {
         {name: 'Volvo', value: 'Volvo'}
       ],
       placeholder: 'Выберите',
-      disabled: true
+      required: true
     },
     {
       key: 'carsSearch',
@@ -40,7 +40,7 @@ export const description = {
         showClear: true
       },
       placeholder: 'Выберите',
-      disabled: true
+      required: true
     },
     {
       key: 'multiCars',
@@ -62,7 +62,7 @@ export const description = {
         defaultLabel: 'Метка по умолчанию',
       },
       placeholder: 'Поиск',
-      disabled: true
+      required: true
     },
     {
       key: 'sause',
@@ -70,6 +70,7 @@ export const description = {
       label: 'InputText',
       placeholder: 'Введите соус',
       disabled: true,
+      required: true,
       params: {
         pKeyFilter: 'pint'
       }
@@ -80,6 +81,7 @@ export const description = {
       label: 'Spinner',
       placeholder: 'Введите',
       disabled: true,
+      required: true,
       params: {
         minVal: 0,
         maxVal: 100,
@@ -90,7 +92,8 @@ export const description = {
       key: 'password',
       type: 'password',
       label: 'Password',
-      disabled: true
+      disabled: true,
+      required: true
     },
     {
       key: 'comment',
@@ -98,6 +101,7 @@ export const description = {
       label: 'Textarea',
       placeholder: 'Введите комментарии',
       disabled: true,
+      required: true,
       params: {
         rows: 10,
         cols: 40
@@ -107,19 +111,22 @@ export const description = {
       key: 'check',
       type: 'checkbox',
       label: 'Checkbox',
-      disabled: true
+      disabled: true,
+      required: true
     },
     {
       key: 'tricheck',
       type: 'triCheckbox',
       label: 'Tricheckbox',
-      disabled: true
+      disabled: true,
+      required: true
     },
     {
       key: 'switch',
       type: 'inputSwitch',
       label: 'Переключалочка',
-      disabled: true
+      disabled: true,
+      required: true
     },
     {
       key: 'mask',
@@ -127,6 +134,7 @@ export const description = {
       label: 'Маска',
       placeholder: '8(800)___-__-__',
       disabled: true,
+      required: true,
       params: {
         mask: '8(800)999-99-99'
       }
