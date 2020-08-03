@@ -123,7 +123,11 @@ export const description = {
     {
       key: 'startDate',
       type: 'calendar',
-      label: 'Дата начала'
+      label: 'Дата начала',
+      params: {
+        minDate: new Date(),
+        maxDate: new Date()
+      }
     }
   ]
 };

@@ -34,6 +34,8 @@ export class VbPrimeFormComponent implements OnInit, ControlValueAccessor {
   @Input() params?: { // additional attributes for fields
     maxVal?: number; // max value for type number
     minVal?: number; // min value for type number
+    maxDate?: Date; // max date for calendar
+    minDate?: Date; // min date for calendar
     step?: number; // step value for type number
     rows?: number; // rows for type textarea
     cols?: number; // columns for type textarea
