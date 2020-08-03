@@ -29,6 +29,7 @@ export class VbPrimeFormComponent implements OnInit, ControlValueAccessor {
   @Input() key: string;
   @Input() label: string;
   @Input() placeholder: string;
+  @Input() disabled: boolean;
   @Input() required: string;
   @Input() options: any; // array of object for type select
   @Input() params?: { // additional attributes for fields
@@ -73,7 +74,7 @@ export class VbPrimeFormComponent implements OnInit, ControlValueAccessor {
     this.val = v;
     this.onModelChange(v);
   }
-
+  isDisabled = false;
   selectedItem: string;
   selectedItems: any[];
   constructor() { }

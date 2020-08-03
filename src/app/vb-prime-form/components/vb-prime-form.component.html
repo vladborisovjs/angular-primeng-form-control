@@ -3,11 +3,12 @@
   <ng-container [ngSwitch]="type">
     <div *ngSwitchCase="'text'">
       <input class="ui-input-text"
-        [type]="type"
-        [placeholder]="placeholder"
-        [(ngModel)]="value"
-        [value]="value"
-        [pKeyFilter]="(params && params.pKeyFilter) ? params.pKeyFilter : regExpMatchAll"
+             [type]="type"
+             [placeholder]="placeholder"
+             [(ngModel)]="value"
+             [value]="value"
+             [disabled]="disabled ? disabled : isDisabled"
+             [pKeyFilter]="(params && params.pKeyFilter) ? params.pKeyFilter : regExpMatchAll"
       >
     </div>
     <div *ngSwitchCase="'number'">
@@ -15,6 +16,7 @@
         size="40"
         [(ngModel)]="value"
         [placeholder]="placeholder"
+        [disabled]="disabled ? disabled : isDisabled"
         [max]="(params && params.maxVal) ? params.maxVal : undefined"
         [min]="(params && params.minVal) ? params.minVal : 0"
         [step]="(params && params.step) ? params.step : 1">
@@ -22,27 +24,29 @@
     </div>
     <div *ngSwitchCase="'mask'">
       <p-inputMask class="ui-input-mask"
-        [(ngModel)]="value"
-        [mask]="params.mask"
-        [placeholder]="placeholder"
+                   [(ngModel)]="value"
+                   [mask]="params.mask"
+                   [placeholder]="placeholder"
+                   [disabled]="disabled ? disabled : isDisabled"
       >
       </p-inputMask>
     </div>
     <div *ngSwitchCase="'calendar'">
       <p-calendar class="ui-input-calendar"
-        hourFormat="24"
-        (onSelect)="formateDateToISO($event)"
-        [placeholder]="placeholder"
-        [locale]="ru"
-        [showTime]="true"
-        [showButtonBar]="true"
-        [dateFormat]="'dd.mm.yy'"
-        [yearNavigator]="true"
-        [monthNavigator]="true"
-        [minDate]="params.minDate"
-        [maxDate]="params.maxDate"
-        [yearRange]="rangeYear()"
-        [timeOnly]="false"></p-calendar>
+                  hourFormat="24"
+                  (onSelect)="formateDateToISO($event)"
+                  [placeholder]="placeholder"
+                  [disabled]="disabled ? disabled : isDisabled"
+                  [locale]="ru"
+                  [showTime]="true"
+                  [showButtonBar]="true"
+                  [dateFormat]="'dd.mm.yy'"
+                  [yearNavigator]="true"
+                  [monthNavigator]="true"
+                  [minDate]="params.minDate"
+                  [maxDate]="params.maxDate"
+                  [yearRange]="rangeYear()"
+                  [timeOnly]="false"></p-calendar>
     </div>
     <div *ngSwitchCase="'textarea'">
       <textarea
@@ -51,11 +55,13 @@
         [placeholder]="placeholder"
         [(ngModel)]="value"
         [value]="value"
+        [disabled]="disabled ? disabled : isDisabled"
         autoResize="autoResize"></textarea>
     </div>
     <div *ngSwitchCase="'select'">
       <p-dropdown
         (onChange)="writeValue($event.value?.value)"
+        [disabled]="disabled ? disabled : isDisabled"
         [placeholder]="placeholder"
         optionLabel="name"
         [options]="options"
@@ -69,6 +75,7 @@
       <p-multiSelect
         [(ngModel)]="selectedItems"
         [options]="options"
+        [disabled]="disabled ? disabled : isDisabled"
         [defaultLabel]="params?.defaultLabel"
         [filterPlaceHolder]="placeholder"
         (onChange)="writeValue($event.value)"
@@ -77,29 +84,32 @@
     </div>
     <div *ngSwitchCase="'password'">
       <input class="ui-input-password"
-        [type]="type"
-        [placeholder]="placeholder"
-        [(ngModel)]="value"
-        [value]="value"
+             [type]="type"
+             [placeholder]="placeholder"
+             [(ngModel)]="value"
+             [value]="value"
+             [disabled]="disabled ? disabled : isDisabled"
       >
     </div>
     <div *ngSwitchCase="'checkbox'">
       <p-checkbox
         binary="true"
         [(ngModel)]="value"
+        [disabled]="disabled ? disabled : isDisabled"
       >
       </p-checkbox>
     </div>
     <div *ngSwitchCase="'triCheckbox'">
       <p-triStateCheckbox
         [(ngModel)]="value"
+        [disabled]="disabled ? disabled : isDisabled"
       >
       </p-triStateCheckbox>
     </div>
     <div *ngSwitchCase="'inputSwitch'">
       <p-inputSwitch
         [(ngModel)]="value"
-
+        [disabled]="disabled ? disabled : isDisabled"
       >
       </p-inputSwitch>
     </div>

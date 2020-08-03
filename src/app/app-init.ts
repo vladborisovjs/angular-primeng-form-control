@@ -17,6 +17,7 @@ export const description = {
         {name: 'Volvo', value: 'Volvo'}
       ],
       placeholder: 'Выберите',
+      disabled: true
     },
     {
       key: 'carsSearch',
@@ -39,6 +40,7 @@ export const description = {
         showClear: true
       },
       placeholder: 'Выберите',
+      disabled: true
     },
     {
       key: 'multiCars',
@@ -60,12 +62,14 @@ export const description = {
         defaultLabel: 'Метка по умолчанию',
       },
       placeholder: 'Поиск',
+      disabled: true
     },
     {
       key: 'sause',
       type: 'text',
       label: 'InputText',
       placeholder: 'Введите соус',
+      disabled: true,
       params: {
         pKeyFilter: 'pint'
       }
@@ -75,6 +79,7 @@ export const description = {
       type: 'number',
       label: 'Spinner',
       placeholder: 'Введите',
+      disabled: true,
       params: {
         minVal: 0,
         maxVal: 100,
@@ -85,12 +90,14 @@ export const description = {
       key: 'password',
       type: 'password',
       label: 'Password',
+      disabled: true
     },
     {
       key: 'comment',
       type: 'textarea',
       label: 'Textarea',
       placeholder: 'Введите комментарии',
+      disabled: true,
       params: {
         rows: 10,
         cols: 40
@@ -100,22 +107,26 @@ export const description = {
       key: 'check',
       type: 'checkbox',
       label: 'Checkbox',
+      disabled: true
     },
     {
       key: 'tricheck',
       type: 'triCheckbox',
       label: 'Tricheckbox',
+      disabled: true
     },
     {
       key: 'switch',
       type: 'inputSwitch',
-      label: 'Переключалочка'
+      label: 'Переключалочка',
+      disabled: true
     },
     {
       key: 'mask',
       type: 'mask',
       label: 'Маска',
       placeholder: '8(800)___-__-__',
+      disabled: true,
       params: {
         mask: '8(800)999-99-99'
       }
@@ -124,6 +135,7 @@ export const description = {
       key: 'startDate',
       type: 'calendar',
       label: 'Дата начала',
+      disabled: true,
       params: {
         minDate: new Date(),
         maxDate: new Date()
