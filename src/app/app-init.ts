@@ -59,7 +59,7 @@ export const description = {
       params: {
         defaultLabel: 'Метка по умолчанию',
       },
-      placeholder: 'Выберите тачку',
+      placeholder: 'Поиск',
     },
     {
       key: 'sause',
