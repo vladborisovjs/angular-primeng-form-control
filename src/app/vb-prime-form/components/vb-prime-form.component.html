@@ -2,7 +2,7 @@
   <div *ngIf="label">{{label}}</div>
   <ng-container [ngSwitch]="type">
     <div *ngSwitchCase="'text'">
-      <input
+      <input class="ui-input-text"
         [type]="type"
         [placeholder]="placeholder"
         [(ngModel)]="value"
@@ -21,7 +21,7 @@
       </p-spinner>
     </div>
     <div *ngSwitchCase="'mask'">
-      <p-inputMask
+      <p-inputMask class="ui-input-mask"
         [(ngModel)]="value"
         [mask]="params.mask"
         [placeholder]="placeholder"
@@ -29,20 +29,18 @@
       </p-inputMask>
     </div>
     <div *ngSwitchCase="'calendar'">
-      <p-calendar hourFormat="24"
-                  (onSelect)="formateDateToISO($event)"
-                  [placeholder]="placeholder"
-                  [locale]="ru"
-                  [showTime]="true"
-                  [showButtonBar]="true"
-                  [dateFormat]="'dd.mm.yy'"
-                  [yearNavigator]="true"
-                  [monthNavigator]="true"
-                  [yearRange]="rangeYear()"
-                  [timeOnly]="false"
-      >
-
-      </p-calendar>
+      <p-calendar class="ui-input-calendar"
+        hourFormat="24"
+        (onSelect)="formateDateToISO($event)"
+        [placeholder]="placeholder"
+        [locale]="ru"
+        [showTime]="true"
+        [showButtonBar]="true"
+        [dateFormat]="'dd.mm.yy'"
+        [yearNavigator]="true"
+        [monthNavigator]="true"
+        [yearRange]="rangeYear()"
+        [timeOnly]="false"></p-calendar>
     </div>
     <div *ngSwitchCase="'textarea'">
       <textarea
@@ -76,7 +74,7 @@
       </p-multiSelect>
     </div>
     <div *ngSwitchCase="'password'">
-      <input
+      <input class="ui-input-password"
         [type]="type"
         [placeholder]="placeholder"
         [(ngModel)]="value"
